@@ -4,39 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nikah Invitation - Yawar & Rubeena</title>
+    
+    <!-- CSS Link -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts for Elegant Arabic & English Styling -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
-        <p class="arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
-        <p>Together with their families</p>
-        <h1>Yawar Abbas & Rubeena Ayoub</h1>
-        <p>invite you to join them for their Nikah Ceremony</p>
-        <p class="date">31 · August · 2026</p>
+        <p class="arabic-header" dir="rtl" lang="ar">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+        <div class="divider">✦</div>
+        <p class="subtitle">Together with their families</p>
+
+        <h1 class="couple-names">
+            <span class="groom">Yawar Abbas <small>S/O Muhammad Shafa</small></span>
+            <span class="ampersand">&amp;</span>
+            <span class="bride">Rubeena Ayoub <small>D/O Muhammad Ayoub</small></span>
+        </h1>
+
+        <p class="invite-text">invite you to join them for their Nikah Ceremony</p>
+        <p class="event-date-banner">31 · August · 2026</p>
+        <div class="divider">✦</div>
     </header>
 
     <main>
+
+        <!-- Countdown Timer Section -->
+        <section class="countdown-section">
+            <p class="section-subtitle">Counting down to</p>
+            <h2>The Blessed Day</h2>
+
+            <div id="timer" class="timer-container">
+                <div class="time-box"><span id="days">00</span><p>Days</p></div>
+                <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
+                <div class="time-box"><span id="minutes">00</span><p>Minutes</p></div>
+                <div class="time-box"><span id="seconds">00</span><p>Seconds</p></div>
+            </div>
+        </section>
+
         <!-- Event Details Section -->
-        <section class="details">
+        <section class="details-section">
+            <p class="section-subtitle">Please join us</p>
             <h2>Nikah Details</h2>
-            <p>📅 31 August 2026</p>
-            <p>⏰ 3:00 PM (PST)</p>
-            <p>📍 Muhammad Ayoub House, Ithan, Sikandarabad</p>
-            <a href="https://maps.app.goo.gl/17WktRdbWFnrhoVA9" target="_blank">Get Directions</a>
+
+            <div class="details-card">
+                <p class="ceremony-title">Nikah Ceremony</p>
+                <p>📅 <strong>31 August 2026</strong></p>
+                <p>⏰ <strong>3:00 PM (PST, UTC+5)</strong></p>
+                <p>📍 <strong>Muhammad Ayoub House, Ithan, Sikandarabad</strong></p>
+
+                <a href="https://maps.app.goo.gl/17WktRdbWFnrhoVA9" class="btn btn-map" target="_blank" rel="noopener">
+                    Get Directions
+                </a>
+            </div>
+        </section>
+
+        <!-- Quranic Verse Section -->
+        <section class="verse-section">
+            <div class="ornament">۞</div>
+            <h2>A Blessing Upon This Union</h2>
+            <div class="verse-box">
+                <p class="arabic-verse" dir="rtl" lang="ar">
+                    وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنٓوا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+                </p>
+                <p class="translation">
+                    “And among His signs is that He created for you spouses from among yourselves so that you may find tranquility in them, and He placed between you love and mercy.”
+                </p>
+                <p class="reference">— Surah Ar-Rum (30:21)</p>
+            </div>
         </section>
 
         <!-- RSVP Section -->
-        <section class="rsvp">
+        <section class="rsvp-section">
+            <p class="section-subtitle">Kindly Confirm</p>
             <h2>RSVP</h2>
-            <p>Kindly confirm your presence:</p>
-            <a href="https://wa.me/923122050280?text=I%20will%20be%20there!" target="_blank">WhatsApp Hassan Abbas</a>
+            <p>We would be honored by your presence.</p>
+
+            <div class="rsvp-cards">
+                <div class="contact-card">
+                    <p class="contact-name">Hassan Abbas</p>
+                    <a href="https://wa.me/923122050280?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20confirm%20my%20presence%20at%20the%20Nikah%20Ceremony%20of%20Yawar%20%26%20Rubeena%20on%2031st%20August%202026.%20Jazak%20Allah%20Khair." class="btn btn-whatsapp" target="_blank" rel="noopener">
+                        WhatsApp
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <p class="contact-name">Azhar Abbas</p>
+                    <a href="https://wa.me/923154649504?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20confirm%20my%20presence%20at%20the%20Nikah%20Ceremony%20of%20Yawar%20%26%20Rubeena%20on%2031st%20August%202026.%20Jazak%20Allah%20Khair." class="btn btn-whatsapp" target="_blank" rel="noopener">
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
         </section>
+
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>Your presence and prayers are the greatest gift.</p>
+        <div class="ornament">۞</div>
+        <p class="footer-msg">Your presence and prayers are the greatest gift.</p>
+        <h3>Rubeena Ayoub &amp; Yawar Abbas</h3>
+        <p>31 August 2026</p>
+        <p class="arabic-header" dir="rtl" lang="ar">ما شاء الله</p>
     </footer>
 
+    <!-- Background Music Element & Floating Toggle Button -->
+    <audio id="bg-music" loop preload="none">
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="music-toggle" class="floating-music-btn">🎵 Play Music</button>
+
+    <!-- JavaScript File Link -->
+    <script src="script.js"></script>
 </body>
 </html>
