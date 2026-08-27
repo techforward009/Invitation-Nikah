@@ -1,42 +1,241 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fcf8f2; /* Soft cream/wedding tone */
-    color: #333;
-    text-align: center;
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+    --gold: #c5a059;
+    --dark-gold: #8a6d3b;
+    --light-bg: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c3e50;
+    --accent: #25d366;
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    text-align: center;
+    line-height: 1.6;
+    padding: 20px 10px;
+}
+
+/* Header & Typography */
 header {
-    padding: 40px 20px;
+    padding: 40px 15px 20px;
 }
 
-.arabic {
-    font-size: 1.5rem;
-    color: #c5a059; /* Gold accent */
+.arabic-header {
+    font-family: 'Amiri', serif;
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin-bottom: 10px;
 }
 
-h1 {
+.divider {
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.subtitle {
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    color: #777;
+    font-size: 1.1rem;
+}
+
+.couple-names {
+    font-family: 'Playfair Display', serif;
+    margin: 25px 0;
+}
+
+.groom, .bride {
+    display: block;
+    font-size: 2.2rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.groom small, .bride small {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #666;
+    margin-top: 4px;
+}
+
+.ampersand {
+    display: block;
+    font-family: 'Amiri', serif;
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: var(--gold);
     margin: 10px 0;
 }
 
-section {
-    background: #ffffff;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 500px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+.event-date-banner {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    color: var(--dark-gold);
+    margin-top: 15px;
+    font-weight: 600;
 }
 
-a {
+/* Glassmorphism Cards Layout */
+section {
+    background: var(--card-bg);
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-gold);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: #888;
+}
+
+/* Countdown Styles */
+.timer-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.time-box {
+    background: #fdfaf5;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    padding: 12px 8px;
+    border-radius: 10px;
+    min-width: 70px;
+}
+
+.time-box span {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--dark-gold);
+    display: block;
+}
+
+.time-box p {
+    font-size: 0.7rem;
+    color: #666;
+    text-transform: uppercase;
+}
+
+/* Verses Section */
+.ornament {
+    color: var(--gold);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.arabic-verse {
+    font-family: 'Amiri', serif;
+    font-size: 1.4rem;
+    color: #333;
+    line-height: 2.2;
+    margin: 15px 0;
+}
+
+.translation {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.reference {
+    font-size: 0.85rem;
+    color: var(--gold);
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+/* RSVP Buttons */
+.rsvp-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-card {
+    background: #fdfaf5;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    flex: 1;
+    min-width: 180px;
+}
+
+.btn {
     display: inline-block;
-    margin-top: 10px;
     padding: 10px 20px;
-    background-color: #25d366; /* WhatsApp green or custom gold */
-    color: white;
+    border-radius: 25px;
     text-decoration: none;
-    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-map {
+    background: var(--gold);
+    color: #fff;
+}
+
+.btn-whatsapp {
+    background: var(--accent);
+    color: #fff;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Floating Music Button */
+.floating-music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--dark-gold);
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+footer {
+    padding: 40px 10px 80px;
+    font-family: 'Playfair Display', serif;
 }
