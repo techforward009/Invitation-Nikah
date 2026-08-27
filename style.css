@@ -219,6 +219,34 @@ h2 {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+/* Embedded Map Styling */
+.venue-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 5px;
+}
+
+.venue-address {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.map-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 15px 0;
+    border: 1px solid rgba(197, 160, 89, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+}
+
 /* Floating Music Button */
 .floating-music-btn {
     position: fixed;
